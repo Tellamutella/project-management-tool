@@ -11,7 +11,7 @@ const projectSchema = new mongoose.Schema({
   },
   stage: {
     type: String,
-    default: '3'
+    default: '1'
   }
 });
 

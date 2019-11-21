@@ -39,4 +39,16 @@ router.post("/project/:id/:stage", (req, res) => {
       res.json(err);
     });
 });
+
+router.post("/delete/:projectId", (req, res) => {
+  Project.findByIdAndDelete(req.params.projectId)
+    .then(project => {
+      console.log("project deleted");
+      res.send("deleted");
+    })
+    .catch(err => {
+      console.log(error);
+    });
+});
+
 module.exports = router;
